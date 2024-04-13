@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro para Vacunacion COVID-19</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js?hl=es-419" async defer></script>
+</head>
+<body>
+    
+    <div class="background" >
+        <div class="card w-50">
+            <div class="card-body">
+                <form id="form">
+                    <h5 class="card-title">Registro para Vacunacion COVID-19</h5>
+                    <br>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre aquí">
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Usuario:</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Ingresa el nombre de usuario que quiseras registrar">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Sexo:</label>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radioHombre" name="sexo" value="Hombre">
+                            <label class="form-check-label" for="radioHombre">Hombre</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="radioMujer" name="sexo" value="Mujer">
+                            <label class="form-check-label" for="radioMujer">Mujer</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="123@ejemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="password" name="password" >
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="habeasData" name="habeasData">
+                        <label class="form-check-label" for="habeasData">
+                            Declaro haber leido y acepto las condiciones generales del programa y la normativa sobre protección de datos.
+                        </label>
+                    </div>
+                    <br>
+                    <div class="g-recaptcha" data-sitekey="6LdVg7kpAAAAAHSTmy-Y7MxsB67dRj2URaYPZSaP" ></div>
+                    <br>
+                    <button 
+                        class="btn btn-primary" 
+                    >
+                        Enviar
+                    </button>
+                    <br><br>
+                    <div class="alert alert-danger" role="alert" hidden id="alerta">
+                        Mensaje
+                    </div>
+                    <div class="alert alert-success" role="alert" hidden id="enviado">
+                        Enviado con exito.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="methods.js"></script>
+
+</body>
+</html>
